@@ -122,13 +122,11 @@ const App: FC = () => {
             series: [
               ...fundData.map((fund) => ({
                 type: 'line',
-                stack: 'Total',
                 name: fund.name,
                 data: fund.netWorthData.map((item) => item[1])
               })),
               {
                 type: 'line',
-                stack: 'Total',
                 name: '沪深 300 指数',
                 data: csi300Data.map((item) => Number(item[2]) / 1000)
               }
@@ -185,7 +183,6 @@ const App: FC = () => {
           ],
           series: fundData.map((fund) => ({
             type: 'line',
-            stack: 'Total',
             name: fund.name,
             data: fund.netWorthData.map(
               (item, k) =>
